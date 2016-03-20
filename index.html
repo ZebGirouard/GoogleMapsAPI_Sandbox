@@ -10,6 +10,7 @@
   </head>
   <body>
     <div id="map"></div>
+    <div id="mapKML"></div>
     <script>
       var map;
       function initMap() {
@@ -24,11 +25,22 @@
         document.getElementsByTagName('head')[0].appendChild(script);
       }
       
+      function initMapKML() {
+        mapKML = new google.maps.Map(document.getElementById('mapKML'), {
+          center: new google.maps.LatLng(-19.257753, 146.823688),
+          zoom: 2,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        });
+      }
+      
       window.eqfeed_callback = function(response) {
           map.data.addGeoJson(response);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCWAOJAfx45AMBnYGpeeboch2xd99YUdJ8"
+         async defer>
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMapKML&key=AIzaSyCWAOJAfx45AMBnYGpeeboch2xd99YUdJ8"
          async defer>
     </script>
   </body>
