@@ -1,5 +1,10 @@
       var map;
       var mapKML;
+      
+      window.eqfeed_callback = function(response) {
+          map.data.addGeoJson(response);
+      }
+      
       function initMap() {
         //GeoJSON Map
         var mapOptions = {
@@ -32,8 +37,4 @@
           var testimonial = document.getElementById('capture');
           testimonial.innerHTML = content;
         });
-      }
-      
-      window.eqfeed_callback = function(response) {
-          map.data.addGeoJson(response);
       }
