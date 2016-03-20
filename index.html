@@ -17,6 +17,8 @@
           center: {lat: 44.540, lng: -78.546},
           zoom: 8
         });
+        var localJson = map.data.loadGeoJson('data.json');
+        console.log(localJson);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
