@@ -14,6 +14,7 @@
     <script>
       var map;
       function initMap() {
+        //GeoJSON Map
         var mapDiv = document.getElementById('map');
         map = new google.maps.Map(mapDiv, {
           center: {lat: 44.540, lng: -78.546},
@@ -23,14 +24,13 @@
         var script = document.createElement('script');
         script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
         document.getElementsByTagName('head')[0].appendChild(script);
-      }
-      
-      function initMapKML() {
+        
+        //KML Map
         mapKML = new google.maps.Map(document.getElementById('mapKML'), {
           center: new google.maps.LatLng(-19.257753, 146.823688),
           zoom: 2,
           mapTypeId: google.maps.MapTypeId.TERRAIN
-        });
+        });        
       }
       
       window.eqfeed_callback = function(response) {
@@ -38,9 +38,6 @@
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCWAOJAfx45AMBnYGpeeboch2xd99YUdJ8"
-         async defer>
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMapKML&key=AIzaSyCWAOJAfx45AMBnYGpeeboch2xd99YUdJ8"
          async defer>
     </script>
   </body>
