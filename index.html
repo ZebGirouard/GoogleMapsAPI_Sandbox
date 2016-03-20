@@ -14,6 +14,7 @@
     <div class="googleMaps" id="mapKML"></div>
     <script>
       var map;
+      var mapKML;
       function initMap() {
         //GeoJSON Map
         var mapDiv = document.getElementById('map');
@@ -36,7 +37,7 @@
         var kmlOptions = {
           suppressInfoWindows: true,
           preserveViewport: false,
-          map: map
+          map: mapKML
         };
         var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
       }
