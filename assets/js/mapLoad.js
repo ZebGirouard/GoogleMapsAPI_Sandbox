@@ -6,7 +6,12 @@
         for (var i = 0; i < response.features.length; i++) {
           var coords = response.features[i].geometry.coordinates;
           var latLng = new google.maps.LatLng(coords[1], coords[0]);
-          heatmapData.push(latLng);
+          var magnitude = results.features[i].properties.mag;
+          var weightedLoc = {
+            location: latLng,
+            weight: Math.pow(2, magnitude)
+          };
+          heatmapData.push(weightedLoc);
         }
         var heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatmapData,
