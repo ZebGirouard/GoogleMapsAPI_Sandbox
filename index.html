@@ -18,6 +18,9 @@
           zoom: 8
         });
         map.data.loadGeoJson('assets/usStates.json');
+        var script = document.createElement('script');
+        script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+        document.getElementsByTagName('head')[0].appendChild(script);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
