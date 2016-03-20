@@ -11,23 +11,24 @@
   <body>
     <div id="map"></div>
     <script>
-
+      var map;
       function initMap() {
         var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv, {
+        map = new google.maps.Map(mapDiv, {
           center: {lat: 44.540, lng: -78.546},
           zoom: 8
         });
         map.data.loadGeoJson('assets/usStates.json');
-        function eqfeed_callback(results) {
-          map.data.addGeoJson(results);
-        }
         var script = document.createElement('script');
         script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
         document.getElementsByTagName('head')[0].appendChild(script);
       }
+      
+      window.eqfeed_callback = function(response) {
+          map.data.addGeoJson(response);
+      }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCWAOJAfx45AMBnYGpeeboch2xd99YUdJ8"
          async defer>
     </script>
   </body>
