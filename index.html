@@ -40,6 +40,11 @@
           map: mapKML
         };
         var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
+        google.maps.event.addListener(kmlLayer, 'click', function(event) {
+          var content = event.featureData.infoWindowHtml;
+          var testimonial = document.getElementById('capture');
+          testimonial.innerHTML = content;
+        });
       }
       
       window.eqfeed_callback = function(response) {
