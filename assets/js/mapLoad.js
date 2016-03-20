@@ -6,7 +6,7 @@
         for (var i = 0; i < response.features.length; i++) {
           var coords = response.features[i].geometry.coordinates;
           var latLng = new google.maps.LatLng(coords[1], coords[0]);
-          var magnitude = results.features[i].properties.mag;
+          var magnitude = response.features[i].properties.mag;
           var weightedLoc = {
             location: latLng,
             weight: Math.pow(2, magnitude)
