@@ -1,8 +1,20 @@
       var map;
       var mapKML;
       
-      window.eqfeed_callback = function(response) {
+      function eqfeed_callback = function(response) {
           map.data.addGeoJson(response);
+      }
+      
+      function getCircle(magnitude) {
+        var circle = {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'red',
+          fillOpacity: .2,
+          scale: Math.pow(2, magnitude) / 2,
+          strokeColor: 'white',
+          strokeWeight: .5
+        };
+        return circle;
       }
       
       function initMap() {
@@ -18,6 +30,14 @@
         var script = document.createElement('script');
         script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
         document.getElementsByTagName('head')[0].appendChild(script);
+        
+        /* Add Circle Style */
+        map.data.setStyle(function(feature) {
+          var magnitude = feature.getProperty('mag');
+          return {
+            icon: getCircle(magnitude)
+          };
+        });   
         
         //KML Map
         mapKML = new google.maps.Map(document.getElementById('mapKML'), {
