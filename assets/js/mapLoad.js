@@ -1,7 +1,7 @@
       var map;
       var mapKML;
       
-      function eqfeed_callback = function(response) {
+      function eqfeed_callback(response) {
           map.data.addGeoJson(response);
       }
       
