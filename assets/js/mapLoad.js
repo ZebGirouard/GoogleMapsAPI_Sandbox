@@ -59,9 +59,16 @@
         
         //Styled Map
         
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: iconBase + 'schools_maps.png'
+        });
+
         mapStyled = new google.maps.Map(document.getElementById('mapStyled'), {
           center: new google.maps.LatLng(37.790611, -122.391136),
-          zoom: 10,
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
         
