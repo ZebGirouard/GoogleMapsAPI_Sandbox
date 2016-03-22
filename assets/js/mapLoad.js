@@ -154,7 +154,7 @@
           legend.appendChild(div);
         }
         
-                var features = [
+        var features = [
           {
             position: new google.maps.LatLng(-33.91721, 151.22630),
             type: 'info'
