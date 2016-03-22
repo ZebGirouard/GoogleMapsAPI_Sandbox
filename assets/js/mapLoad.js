@@ -61,7 +61,7 @@
         
         mapStyled = new google.maps.Map(document.getElementById('mapStyled'), {
           center: new google.maps.LatLng(37.790611, -122.391136),
-          zoom: 2,
+          zoom: 8,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
         
