@@ -130,6 +130,22 @@
         document.getElementById('legend'));
         
         var legend = document.getElementById('legend');
+        
+        var styles = {
+          parking: {
+            name: 'Parking',
+            icon: iconBase + 'parking_lot_maps.png'
+          },
+          library: {
+            name: 'Library',
+            icon: iconBase + 'library_maps.png'
+          },
+          info: {
+            name: 'Info',
+            icon: iconBase + 'info-i_maps.png'
+          }
+        };
+        
         for (var style in styles) {
           var name = style.name;
           var icon = style.icon;
