@@ -61,7 +61,7 @@
         
         mapStyled = new google.maps.Map(document.getElementById('mapStyled'), {
           center: new google.maps.LatLng(37.790611, -122.391136),
-          zoom: 8,
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
         
@@ -90,9 +90,16 @@
               { lightness: 96 }
             ]
           }, {
+            featureType: 'poi',
+            elementType: 'geometry',
+            stylers: [
+              { visibility: 'off' }
+            ]
+          }, {
             featureType: 'poi.school',
             elementType: 'geometry',
             stylers: [
+              { visibility: 'on' },
               { hue: '#fff700' },
               { lightness: -15 },
               { saturation: 99 }
