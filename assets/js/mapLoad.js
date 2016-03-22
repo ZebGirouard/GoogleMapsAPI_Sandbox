@@ -120,12 +120,12 @@
           }
         ]);
         
-        /*var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
           position: myLatLng,
           map: mapStyled,
           icon: iconBase + 'schools_maps.png'
         });
-        */
+        /*
         function addMarker(feature) {
           var marker = new google.maps.Marker({
             position: feature.position,
@@ -135,6 +135,7 @@
         }
         
         addMarker(myLatLng);        
+        */
         
         //KML Map
         mapKML = new google.maps.Map(document.getElementById('mapKML'), {
