@@ -1,5 +1,6 @@
       var map;
       var mapKML;
+      var mapStyled;
       
       function eqfeed_callback(response) {
         var heatmapData = [];
@@ -56,6 +57,48 @@
           };
         }); */  
         
+        //Styled Map
+        
+        mapStyled = new google.maps.Map(document.getElementById('mapStyled'), {
+          center: new google.maps.LatLng(37.790611, -122.391136),
+          zoom: 2,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        });  
+        
+        mapStyled.set('styles', [
+          {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [
+              { color: '#000000' },
+              { weight: 1.6 }
+            ]
+          }, {
+            featureType: 'road',
+            elementType: 'labels',
+            stylers: [
+              { saturation: -100 },
+              { invert_lightness: true }
+            ]
+          }, {
+            featureType: 'landscape',
+            elementType: 'geometry',
+            stylers: [
+              { hue: '#ffff00' },
+              { gamma: 1.4 },
+              { saturation: 82 },
+              { lightness: 96 }
+            ]
+          }, {
+            featureType: 'poi.school',
+            elementType: 'geometry',
+            stylers: [
+              { hue: '#fff700' },
+              { lightness: -15 },
+              { saturation: 99 }
+            ]
+          }
+        ]);
         //KML Map
         mapKML = new google.maps.Map(document.getElementById('mapKML'), {
           center: new google.maps.LatLng(-19.257753, 146.823688),
