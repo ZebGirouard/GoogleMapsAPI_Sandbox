@@ -145,7 +145,7 @@
             icon: iconBase + 'info-i_maps.png'
           }
         };
-        
+        /*
         for (var style in styles) {
           var name = style.name;
           var icon = style.icon;
@@ -153,7 +153,7 @@
           div.innerHTML = '<img src="' + icon + '"> ' + name;
           legend.appendChild(div);
         }
-        
+        */
         var features = [
           {
             position: new google.maps.LatLng(-33.91721, 151.22630),
