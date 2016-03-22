@@ -190,10 +190,10 @@
             position: new google.maps.LatLng(37.780611, -122.391136),
             type: 'parking'
           }, {
-            position: new google.maps.LatLng(37.800611, -122.391136),
+            position: new google.maps.LatLng(37.780611, -122.401136),
             type: 'parking'
           }, {
-            position: new google.maps.LatLng(37.790611, -122.381136),
+            position: new google.maps.LatLng(37.790611, -122.401136),
             type: 'library'
           }
         ];
