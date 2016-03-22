@@ -58,7 +58,7 @@
         }); */  
         
         //Styled Map
-        
+        var myLatLng = 37.790611, -122.391136;
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var marker = new google.maps.Marker({
           position: myLatLng,
@@ -67,7 +67,7 @@
         });
 
         mapStyled = new google.maps.Map(document.getElementById('mapStyled'), {
-          center: new google.maps.LatLng(37.790611, -122.391136),
+          center: new google.maps.LatLng(myLatLng),
           zoom: 12,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
