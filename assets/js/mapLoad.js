@@ -166,16 +166,16 @@
             position: new google.maps.LatLng(37.791011, -122.391136),
             type: 'info'
           }, {
-            position: new google.maps.LatLng(37.800211, -122.401136),
+            position: new google.maps.LatLng(37.770211, -122.451136),
             type: 'info'
           }, {
-            position: new google.maps.LatLng(37.810611, -122.400936),
+            position: new google.maps.LatLng(37.770611, -122.400936),
             type: 'info'
           }, {
-            position: new google.maps.LatLng(37.800611, -122.391336),
+            position: new google.maps.LatLng(37.760611, -122.421336),
             type: 'info'
           }, {
-            position: new google.maps.LatLng(37.810611, -122.391536),
+            position: new google.maps.LatLng(37.760611, -122.391536),
             type: 'info'
           }, {
             position: new google.maps.LatLng(37.790611, -122.390736),
