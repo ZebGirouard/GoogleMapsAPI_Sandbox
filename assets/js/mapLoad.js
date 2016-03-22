@@ -129,6 +129,15 @@
         mapStyled.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
         document.getElementById('legend'));
         
+        var legend = document.getElementById('legend');
+        for (var style in styles) {
+          var name = style.name;
+          var icon = style.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+        }
+        
         /*
         function addMarker(feature) {
           var marker = new google.maps.Marker({
