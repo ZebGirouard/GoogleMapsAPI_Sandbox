@@ -145,15 +145,16 @@
             icon: iconBase + 'info-i_maps.png'
           }
         };
-        /*
-        for (var style in styles) {
+      
+        for (var key in styles) {
+          var style = styles[key];
           var name = style.name;
           var icon = style.icon;
           var div = document.createElement('div');
           div.innerHTML = '<img src="' + icon + '"> ' + name;
           legend.appendChild(div);
         }
-        */
+        
         var features = [
           {
             position: new google.maps.LatLng(-33.91721, 151.22630),
