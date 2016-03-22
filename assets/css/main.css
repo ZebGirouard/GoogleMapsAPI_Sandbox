@@ -1,0 +1,9 @@
+.googleMaps {
+  width: 500px;
+  height: 400px;
+}
+
+#legend {
+  background: white;
+  padding: 10px;
+}
