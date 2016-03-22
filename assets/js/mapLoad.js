@@ -125,6 +125,10 @@
           map: mapStyled,
           icon: iconBase + 'schools_maps.png'
         });
+        
+        mapStyled.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
+        document.getElementById('legend'));
+        
         /*
         function addMarker(feature) {
           var marker = new google.maps.Marker({
