@@ -60,12 +60,18 @@
         //Styled Map
         var myLatLng = {lat: 37.790611, lng: -122.391136};
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          icon: iconBase + 'schools_maps.png'
-        });
-
+        var icons = {
+          parking: {
+            icon: iconBase + 'parking_lot_maps.png'
+          },
+          library: {
+            icon: iconBase + 'library_maps.png'
+          },
+          info: {
+            icon: iconBase + 'info-i_maps.png'
+          }
+        };
+        
         mapStyled = new google.maps.Map(document.getElementById('mapStyled'), {
           center: new google.maps.LatLng(myLatLng),
           zoom: 12,
@@ -113,6 +119,23 @@
             ]
           }
         ]);
+        
+        /*var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: mapStyled,
+          icon: iconBase + 'schools_maps.png'
+        });
+        */
+        function addMarker(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: mapStyled
+          });
+        }
+        
+        addMarker(myLatLng);        
+        
         //KML Map
         mapKML = new google.maps.Map(document.getElementById('mapKML'), {
           center: new google.maps.LatLng(-19.257753, 146.823688),
