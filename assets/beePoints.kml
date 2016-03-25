@@ -8,19 +8,6 @@
         </Icon>
       </IconStyle>
     </Style>
-    <Style id="My_Style">
- <IconStyle> <Icon> <href>honey-bee-hi.png</href> </Icon></IconStyle>
-</Style> 
-
-<Placemark>
- <name> New point</name> 
- <description>This is a new point to learn KML format.</description>
- <styleUrl> #My_Style</styleUrl> 
- <Point>
-  <coordinates>
-   -105.2572082,39.9739314,0
-  </coordinates>
- </Point> 
 <Placemark>
 <name>1</name>
 <description>Level 3</description><styleUrl>#icon</styleUrl>
