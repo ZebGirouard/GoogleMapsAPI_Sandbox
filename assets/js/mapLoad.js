@@ -235,7 +235,7 @@
           zoom: 10,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
-        var kmlUrl = 'assets/beePoints.kml';
+        var kmlUrl = '/assets/beePoints.kml';
         var kmlOptions = {
           suppressInfoWindows: true,
           preserveViewport: false,
