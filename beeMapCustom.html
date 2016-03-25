@@ -1,6 +1,13 @@
-<script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  </head>
+  <body>
+    <div class="googleMaps" id="beeMapKML"></div>
+    <script>
       function initMap() {
-        //KML Map for BeeSafe
+            //KML Map for BeeSafe
         beeMapKML = new google.maps.Map(document.getElementById('beeMapKML'), {
           center: new google.maps.LatLng(40.020876, -105.265729),
           zoom: 10,
@@ -20,4 +27,10 @@
           icon: 'http://zebgirouard.github.io/GoogleMapsAPI_Sandbox/assets/bee_small.jpg'
         });*/
       }
-</script>
+      </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCWAOJAfx45AMBnYGpeeboch2xd99YUdJ8&libraries=geometry,visualization"
+         async defer>
+    </script>
+  </body>
+</html>
+
