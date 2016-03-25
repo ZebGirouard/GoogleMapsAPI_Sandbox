@@ -239,7 +239,7 @@
         var kmlOptions = {
           suppressInfoWindows: true,
           preserveViewport: false,
-          map: mapKML
+          map: beeMapKML
         };
         var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
         google.maps.event.addListener(kmlLayer, 'click', function(event) {
