@@ -230,9 +230,9 @@
         });
         
         //KML Map for BeeSafe
-        mapKML = new google.maps.Map(document.getElementById('mapKML'), {
+        beeMapKML = new google.maps.Map(document.getElementById('beeMapKML'), {
           center: new google.maps.LatLng(40.020876, -105.265729),
-          zoom: 2,
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
         var kmlUrl = 'assets/beePoints.kml';
