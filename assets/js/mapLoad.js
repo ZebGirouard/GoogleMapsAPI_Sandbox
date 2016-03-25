@@ -248,10 +248,10 @@
           var testimonial = document.getElementById('capture');
           testimonial.innerHTML = content;*/
         });
-        
+        /*
         var marker = new google.maps.Marker({
           position: {lat: 40.020876, lng: -105.265729},
           map: beeMapKML,
           icon: 'http://zebgirouard.github.io/GoogleMapsAPI_Sandbox/assets/bee_small.jpg'
-        });
+        });*/
       }
