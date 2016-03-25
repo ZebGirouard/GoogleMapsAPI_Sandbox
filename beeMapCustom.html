@@ -1,0 +1,23 @@
+<script>
+      function initMap() {
+        //KML Map for BeeSafe
+        beeMapKML = new google.maps.Map(document.getElementById('beeMapKML'), {
+          center: new google.maps.LatLng(40.020876, -105.265729),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        });  
+        var kmlUrl = 'http://zebgirouard.github.io/GoogleMapsAPI_Sandbox/assets/beePoints.kml';
+        var kmlOptions = {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: beeMapKML
+        };
+        var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
+        /*
+        var marker = new google.maps.Marker({
+          position: {lat: 40.020876, lng: -105.265729},
+          map: beeMapKML,
+          icon: 'http://zebgirouard.github.io/GoogleMapsAPI_Sandbox/assets/bee_small.jpg'
+        });*/
+      }
+</script>
