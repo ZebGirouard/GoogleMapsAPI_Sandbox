@@ -4,7 +4,7 @@
     <Style id="icon">
       <IconStyle>
         <Icon>
-          <href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+          <href>http://zebgirouard.github.io/GoogleMapsAPI_Sandbox/assets/bee_small.jpg</href>
         </Icon>
       </IconStyle>
     </Style>
