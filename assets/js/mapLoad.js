@@ -1,6 +1,7 @@
       var map;
       var mapKML;
       var mapStyled;
+      var beeMapKML;
       
       function eqfeed_callback(response) {
         var heatmapData = [];
@@ -226,5 +227,25 @@
           var content = event.featureData.infoWindowHtml;
           var testimonial = document.getElementById('capture');
           testimonial.innerHTML = content;
+        });
+        
+        //KML Map for BeeSafe
+        mapKML = new google.maps.Map(document.getElementById('mapKML'), {
+          center: new google.maps.LatLng(40.020876, -105.265729),
+          zoom: 2,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        });  
+        var kmlUrl = 'assets/beePoints.kml';
+        var kmlOptions = {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: mapKML
+        };
+        var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
+        google.maps.event.addListener(kmlLayer, 'click', function(event) {
+            console.log("Bee Safe Earth!");
+          /*var content = event.featureData.infoWindowHtml;
+          var testimonial = document.getElementById('capture');
+          testimonial.innerHTML = content;*/
         });
       }
