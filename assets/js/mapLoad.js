@@ -216,7 +216,7 @@
           zoom: 2,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
-        var kmlUrl = 'assets/westcampus.kml';
+        var kmlUrl = 'https://developers.google.com/maps/tutorials/kml/westcampus.kml';
         var kmlOptions = {
           suppressInfoWindows: true,
           preserveViewport: false,
@@ -235,7 +235,7 @@
           zoom: 10,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
-        var kmlUrl = '/assets/beePoints.kml';
+        var kmlUrl = 'http://zebgirouard.github.io/GoogleMapsAPI_Sandbox/assets/beePoints.kml';
         var kmlOptions = {
           suppressInfoWindows: true,
           preserveViewport: false,
