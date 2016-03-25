@@ -9,7 +9,7 @@
       </IconStyle>
     </Style>
     <Style id="My_Style">
- <IconStyle> <Icon> <href>http://maps.google.com/mapfiles/kml/pal4/icon28.png</href> </Icon></IconStyle>
+ <IconStyle> <Icon> <href>honey-bee-hi.png</href> </Icon></IconStyle>
 </Style> 
 
 <Placemark>
