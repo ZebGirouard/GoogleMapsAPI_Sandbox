@@ -9,8 +9,9 @@
       </IconStyle>
     </Style>
 <Placemark>
-<name>1</name>
-<description>Level 3</description><styleUrl>#icon</styleUrl>
+<name>Marker 1</name>
+<styleUrl>#icon</styleUrl>
+<description>Level 3</description>
 <Point><coordinates>-105.2572082,39.9739314,0</coordinates></Point>
 </Placemark>
 <Placemark>
