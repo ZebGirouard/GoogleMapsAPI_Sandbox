@@ -242,12 +242,6 @@
           map: beeMapKML
         };
         var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
-        google.maps.event.addListener(kmlLayer, 'click', function(event) {
-            console.log("Bee Safe Earth!");
-          /*var content = event.featureData.infoWindowHtml;
-          var testimonial = document.getElementById('capture');
-          testimonial.innerHTML = content;*/
-        });
         /*
         var marker = new google.maps.Marker({
           position: {lat: 40.020876, lng: -105.265729},
