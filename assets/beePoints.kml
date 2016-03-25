@@ -27,8 +27,9 @@
 <Point><coordinates>-105.2577482,39.9739227,0</coordinates></Point>
 </Placemark>
 <Placemark>
-<name>4</name>
-<description>Level 3</description><styleUrl>#icon</styleUrl>
+<name>Marker 4</name>
+<styleUrl>#icon</styleUrl>
+<description>Level 3</description>
 <Point><coordinates>-105.258397,39.9725252,0</coordinates></Point>
 </Placemark>
 <Placemark>
