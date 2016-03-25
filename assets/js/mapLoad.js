@@ -216,7 +216,7 @@
           zoom: 2,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });  
-        var kmlUrl = 'https://developers.google.com/maps/tutorials/kml/westcampus.kml';
+        var kmlUrl = 'assets/westcampus.kml';
         var kmlOptions = {
           suppressInfoWindows: true,
           preserveViewport: false,
